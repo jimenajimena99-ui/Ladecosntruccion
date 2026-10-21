@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Deconstrucción · Hola</title>
+<meta name="description" content="Terapia en línea, presencial y de pareja. Agenda tu cita o escríbenos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#ffffff;--ink:#103638;--soft:#587274;--main:#0e9696;--pop:#ffc23d;--hi:#ffc6dc}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:Newsreader,serif;-webkit-font-smoothing:antialiased;min-height:100svh}
+  a{color:inherit}
+  main{max-width:440px;margin:0 auto;padding:48px 24px 40px}
+  .sello{width:64px;height:64px;display:block;margin-bottom:36px}
+  .hola{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--main)}
+  h1{font-style:italic;font-weight:400;font-size:44px;line-height:1.05;letter-spacing:-.01em;margin-top:10px}
+  .carta{font-size:22px;line-height:1.5;margin-top:28px}
+  .carta p+p{margin-top:18px}
+  /* Los enlaces viven dentro del texto, subrayados como marcatextos */
+  .carta a{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;text-decoration:none;white-space:nowrap;
+    background:linear-gradient(transparent 55%,var(--hi) 55%,var(--hi) 95%,transparent 95%);padding:0 2px;transition:background-size .3s}
+  .carta a.y{background:linear-gradient(transparent 55%,var(--pop) 55%,var(--pop) 95%,transparent 95%)}
+  .carta a.t{color:var(--main);background:linear-gradient(transparent 55%,#c9eeee 55%,#c9eeee 95%,transparent 95%)}
+  .carta a::after{content:" ↗";font-weight:600}
+  .firma{margin-top:36px;font-style:italic;font-size:22px}
+  .firma b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-style:normal;font-weight:800;font-size:18px;margin-top:4px}
+  .ps{margin-top:40px;padding-top:20px;border-top:1.5px dashed rgba(16,54,56,.3);font-size:17px;color:var(--soft)}
+  .ps b{font-family:"Bricolage Grotesque",sans-serif;color:var(--ink)}
+  .cta{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:36px;background:var(--main);color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;padding:18px;border-radius:999px;box-shadow:5px 5px 0 var(--pop)}
+  @media (prefers-reduced-motion:no-preference){
+    .in{opacity:0;transform:translateY(10px);animation:in .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--d,0) * 140ms)}
+    @keyframes in{to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<main>
+  <svg class="sello in" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+    <circle cx="32" cy="32" r="29" stroke="#0e9696" stroke-width="2"/><circle cx="33" cy="31" r="21" stroke="#ffc23d" stroke-width="5"/>
+    <circle cx="32" cy="32" r="12" stroke="#0e9696" stroke-width="2"/><circle cx="32" cy="32" r="4" fill="#ffc6dc"/>
+  </svg>
+  <span class="hola in" style="--d:1">La Deconstrucción</span>
+  <h1 class="in" style="--d:2">Hola, qué bueno que llegaste hasta aquí.</h1>
+
+  <div class="carta">
+    <p class="in" style="--d:3">Si estás leyendo esto, quizá algo te está pidiendo atención. Aquí no venimos a tapar heridas: venimos a mirarlas de frente.</p>
+    <p class="in" style="--d:4">Si ya lo decidiste, puedes <a class="t" href="https://ladeconstruccion.site.agendapro.com/mx/sucursal/534388" target="_blank" rel="noopener">agendar tu cita</a> en línea, presencial o en pareja.</p>
+    <p class="in" style="--d:5">Si todavía tienes dudas, <a class="y" href="https://wa.me/message/FCKBBMJKQZRLE1" target="_blank" rel="noopener">escríbenos por WhatsApp</a> y te contesta una persona.</p>
+    <p class="in" style="--d:6">Y si quieres conocernos primero, aquí están <a href="../../#enfoques">nuestros enfoques</a> y <a href="../../">nuestra página</a>.</p>
+  </div>
+
+  <p class="firma in" style="--d:7">Con cuidado,<b>El equipo de La Deconstrucción</b></p>
+
+  <a class="cta in" style="--d:8" href="https://ladeconstruccion.site.agendapro.com/mx/sucursal/534388" target="_blank" rel="noopener">Agenda tu cita →</a>
+
+  <p class="ps in" style="--d:9"><b>P.D.</b> Atendemos todos los días de 8 a 21 h (CDMX), en línea y en CDMX, Texcoco e Irapuato.</p>
+</main>
+</body>
+</html>
