@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Deconstrucción · Terapia psicológica</title>
+<meta name="description" content="Un espacio sincero para mirar tus heridas de frente y empezar tu reconstrucción. Terapia en línea, presencial y de pareja.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  /* main = color protagonista (título, botón) · pop = figuras y sombras · hi = resaltador · deep = sección oscura */
+  :root{--bg:#ffffff;--ink:#103638;--soft:#587274;--main:#0e9696;--pop:#ffc23d;--hi:#ffc6dc;--deep:#0f3436}
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s}
+  /* Grano de papel, muy sutil */
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.16;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .15 0 0 0 0 .13 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;position:relative}
+  .serif{font-family:Newsreader,serif;font-style:italic;font-weight:400}
+  .accent{color:var(--main)}
+  .mark{background:linear-gradient(transparent 58%,var(--hi) 58%,var(--hi) 92%,transparent 92%);padding:0 .06em}
+
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+  .brand{font-weight:800;font-size:18px;text-decoration:none;letter-spacing:-.01em}
+  .brand i{font-family:Newsreader,serif;font-weight:500;color:var(--main)}
+  .pill{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;border:2px solid var(--ink);border-radius:999px;padding:9px 18px;font-size:15px;transition:background .25s,color .25s}
+  .pill:hover{background:var(--ink);color:var(--bg)}
+
+  .hero{min-height:calc(100svh - 84px);display:grid;grid-template-columns:1.25fr .9fr;align-items:center;gap:32px;padding-top:24px;padding-bottom:80px}
+  h1{font-weight:800;font-size:clamp(60px,9.6vw,150px);line-height:.92;letter-spacing:-.045em;color:var(--main)}
+  h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+  h1 .line>span{display:inline-block}
+  h1 .mark{color:var(--ink)}
+  .hero .lede{font-size:clamp(21px,2.1vw,28px);line-height:1.3;max-width:28ch;margin-top:32px}
+  .hero .welcome{font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;display:inline-block;margin-bottom:22px;padding:6px 12px;border:2px solid var(--ink);border-radius:999px}
+  .cta{display:inline-flex;align-items:center;gap:12px;background:var(--main);color:#fff;font-weight:800;font-size:20px;text-decoration:none;padding:18px 32px;border-radius:999px;margin-top:40px;box-shadow:5px 5px 0 var(--pop);transition:transform .25s,box-shadow .25s}
+  .cta:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--pop)}
+
+  .art{position:relative;aspect-ratio:1;width:100%;max-width:480px;justify-self:center}
+  .dots{position:absolute;inset:6% 10% 14% 2%;border-radius:50%;
+    background-image:radial-gradient(var(--pop) 32%,transparent 34%);background-size:11px 11px}
+  .art svg{position:absolute;inset:0;width:100%;height:100%}
+
+  section{padding:110px 0;position:relative}
+  .kicker{font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+  h2{font-weight:800;font-size:clamp(40px,5.6vw,76px);line-height:.95;letter-spacing:-.035em;margin-top:12px;max-width:14ch}
+  h2 .serif{font-weight:400;letter-spacing:-.01em}
+
+  .tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:60px}
+  .ticket{position:relative;border:2px solid var(--ink);border-radius:26px;padding:34px 30px 30px;background:var(--bg)}
+  .ticket:nth-child(1){transform:rotate(-1.2deg);box-shadow:8px 8px 0 var(--pop)}
+  .ticket:nth-child(2){transform:rotate(.8deg) translateY(18px);box-shadow:8px 8px 0 var(--hi)}
+  .ticket:nth-child(3){transform:rotate(-.5deg);box-shadow:8px 8px 0 var(--pop)}
+  .ticket h3{font-weight:800;font-size:38px;letter-spacing:-.03em;line-height:1}
+  .ticket .when{font-family:Newsreader,serif;font-style:italic;font-size:20px;margin:14px 0 18px;color:var(--soft)}
+  .ticket .perf{border-top:2px dashed var(--ink);margin:0 -30px 18px;opacity:.4}
+  .ticket ul{list-style:none;display:grid;gap:6px}
+  .ticket li::before{content:"● ";color:var(--main);font-size:12px}
+  .ticket .lbl{font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:block}
+
+  .enf{background:var(--deep);color:#fff}
+  .enf .kicker{color:rgba(255,255,255,.6)}
+  .enf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px}
+  .enf-item svg{width:100%;max-width:220px;aspect-ratio:1;display:block;margin-bottom:26px}
+  .enf-item .part{font-family:Newsreader,serif;font-style:italic;font-size:22px;color:var(--pop)}
+  .enf-item h3{font-weight:800;font-size:34px;letter-spacing:-.03em;line-height:1;margin:4px 0 18px}
+  .enf-item ul{list-style:none;display:grid;gap:12px;color:rgba(255,255,255,.75);font-size:16px}
+  .enf-item strong{color:#fff;font-weight:600}
+
+  .close{text-align:center;padding:130px 0 120px}
+  .close .rings{width:min(300px,70vw);margin:0 auto 40px;display:block}
+  .close blockquote{font-family:Newsreader,serif;font-style:italic;font-size:clamp(28px,3.6vw,48px);line-height:1.18;max-width:22ch;margin:0 auto}
+  .close blockquote b{font-family:"Bricolage Grotesque",sans-serif;font-style:normal;font-weight:800;color:var(--main);letter-spacing:-.02em}
+  .close p{max-width:50ch;margin:28px auto 0;color:var(--soft);font-size:18px}
+
+  footer{border-top:2px solid var(--ink);padding:28px 0 96px}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:600;font-size:14px}
+
+  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--pop);transition:transform .25s}
+  .wa:hover{transform:rotate(-8deg) scale(1.05)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;padding-top:8px}
+    .art{max-width:320px;order:-1}
+    .tickets,.enf-grid{grid-template-columns:1fr}
+    .ticket:nth-child(2){transform:rotate(.8deg)}
+    .enf-item svg{max-width:160px}
+    section{padding:84px 0}
+  }
+  @media (max-width:520px){
+    .wrap{padding-left:16px;padding-right:16px}
+    nav .pill{display:none}
+    .cta{width:100%;justify-content:center}
+    .art{max-width:240px}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#">La Deconstrucción <i>terapia</i></a>
+  <a class="pill" href="https://ladeconstruccion.site.agendapro.com/mx/sucursal/534388" target="_blank" rel="noopener">Agenda tu cita →</a>
+</div></nav>
+
+<header class="wrap hero">
+  <div>
+    <span class="welcome">Bienvenido</span>
+    <h1>
+      <span class="line"><span>Un espacio</span></span>
+      <span class="line"><span><span class="mark">sincero.</span></span></span>
+    </h1>
+    <p class="lede serif">Aquí no venimos a tapar heridas, sino a mirarlas de frente y dejar que se conviertan en el punto de partida de tu <span class="accent">reconstrucción</span>.</p>
+    <a class="cta" href="https://ladeconstruccion.site.agendapro.com/mx/sucursal/534388" target="_blank" rel="noopener">Agenda aquí →</a>
+  </div>
+  <div class="art" aria-hidden="true">
+    <div class="dots"></div>
+    <svg viewBox="0 0 400 400" fill="none" stroke-width="5" style="stroke:var(--main)">
+      <circle cx="230" cy="215" r="160"/><circle cx="234" cy="211" r="128"/>
+      <circle cx="226" cy="219" r="96" stroke-width="11"/><circle cx="231" cy="213" r="64"/><circle cx="229" cy="216" r="30"/>
+    </svg>
+  </div>
+</header>
+
+<section id="modalidades">
+  <div class="wrap">
+    <span class="kicker">Tipos de terapia</span>
+    <h2>¿Cómo quieres <span class="serif accent">venir?</span></h2>
+    <div class="tickets">
+      <article class="ticket">
+        <h3>En línea</h3>
+        <p class="when">Todos los días, 8 a 21 h · CDMX</p>
+        <div class="perf"></div>
+        <p>Desde tu casa, tu coche o donde te sientas segura, seguro.</p>
+      </article>
+      <article class="ticket">
+        <h3>Presencial</h3>
+        <p class="when">Todos los días, 8 a 21 h · CDMX</p>
+        <div class="perf"></div>
+        <span class="lbl">Ubicaciones</span>
+        <ul><li>CDMX: Del Valle, Narvarte, Pedregal</li><li>Texcoco</li><li>Irapuato</li></ul>
+      </article>
+      <article class="ticket">
+        <h3>De pareja</h3>
+        <p class="when">Todos los días, 8 a 21 h · CDMX</p>
+        <div class="perf"></div>
+        <p>Terapia virtual y presencial en Irapuato.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="enf" id="enfoques">
+  <div class="wrap">
+    <span class="kicker">Enfoques</span>
+    <h2>Raíz, copa <span class="serif">y</span> tronco.</h2>
+    <div class="enf-grid">
+      <article class="enf-item">
+        <svg viewBox="0 0 220 220" fill="none" stroke-linecap="round">
+          <circle cx="120" cy="70" r="46" style="fill:var(--pop)"/>
+          <g stroke-width="7" style="stroke:var(--hi)"><path d="M104 20v70M104 90c-14 24-44 34-58 76M104 90c4 34-8 64-22 106M104 90c14 28 42 44 52 86M104 90c24 14 60 20 84 46"/></g>
+        </svg>
+        <span class="part">las raíces</span>
+        <h3>Psicoanálisis</h3>
+        <ul>
+          <li>Busca lo que está <strong>enterrado y oculto</strong>: experiencias tempranas, deseos y <strong>conflictos inconscientes</strong>.</li>
+          <li>Hace consciente lo inconsciente: lo que no vemos sigue influyendo en cómo crecemos.</li>
+          <li>Ayuda a <strong>comprender el origen</strong> de patrones repetitivos que parecen no tener explicación.</li>
+        </ul>
+      </article>
+      <article class="enf-item">
+        <svg viewBox="0 0 220 220" fill="none">
+          <circle cx="96" cy="92" r="64" style="fill:var(--pop)"/>
+          <circle cx="138" cy="108" r="54" style="fill:var(--hi)"/>
+          <path d="M112 150v60" stroke-width="8" stroke-linecap="round" style="stroke:var(--hi)"/>
+        </svg>
+        <span class="part">la copa</span>
+        <h3>Humanista</h3>
+        <ul>
+          <li>Toma distancia para <strong>observar</strong> el árbol completo: su <strong>potencial</strong>, su forma única, hacia dónde quiere crecer.</li>
+          <li>Se <strong>enfoca</strong> en lo que la persona necesita para florecer y ser su mejor versión.</li>
+          <li><strong>Busca sentido</strong> y propósito: qué hace que esa vida valga la pena vivirse.</li>
+        </ul>
+      </article>
+      <article class="enf-item">
+        <svg viewBox="0 0 220 220" fill="none" stroke-width="6">
+          <g style="stroke:var(--hi)"><circle cx="110" cy="110" r="90"/><circle cx="110" cy="110" r="62"/><circle cx="110" cy="110" r="34"/></g>
+          <g style="stroke:var(--pop)"><circle cx="110" cy="110" r="76"/><circle cx="110" cy="110" r="48" stroke-width="12"/><circle cx="110" cy="110" r="18"/></g>
+        </svg>
+        <span class="part">el tronco</span>
+        <h3>Cognitivo conductual</h3>
+        <ul>
+          <li><strong>Observa la estructura interna</strong>: patrones de pensamiento, cómo se percibe la persona y cómo actúa.</li>
+          <li>Identifica <strong>pensamientos y comportamientos</strong> que generan malestar.</li>
+          <li>Genera <strong>estrategias prácticas</strong> para cambiarlos y vivir con más paz en el presente.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <svg class="rings" viewBox="0 0 300 300" fill="none" stroke-width="5" aria-hidden="true">
+      <g style="stroke:var(--pop)"><circle cx="150" cy="150" r="138"/><circle cx="150" cy="150" r="104"/><circle cx="150" cy="150" r="70"/><circle cx="150" cy="150" r="36"/></g>
+      <g style="stroke:var(--main)"><circle cx="150" cy="150" r="121"/><circle cx="150" cy="150" r="87" stroke-width="13"/><circle cx="150" cy="150" r="53"/><circle cx="150" cy="150" r="18"/></g>
+    </svg>
+    <blockquote>Un árbol no esconde sus anillos de sequía, <b>los integra y sigue creciendo.</b></blockquote>
+    <p>Sanar es exactamente eso: no borrar lo vivido, sino dejar de dejar que gobierne lo que aún falta por crecer. Reserva tu espacio y deja que tu siguiente anillo cuente otra historia.</p>
+    <a class="cta" href="https://ladeconstruccion.site.agendapro.com/mx/sucursal/534388" target="_blank" rel="noopener">Agenda aquí →</a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>© La Deconstrucción</span>
+  <span>CDMX · Texcoco · Irapuato · En línea</span>
+</div></footer>
+
+<!-- TODO: poner el número real de WhatsApp: https://wa.me/52XXXXXXXXXX -->
+<a class="wa" href="#" aria-label="Escríbenos por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 3.9c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+    // Entrada tranquila: el título sube línea por línea y los anillos se acomodan
+    const tl = gsap.timeline({defaults:{ease:"power3.out"}});
+    tl.from("h1 .line>span", {yPercent:110, duration:1.1, stagger:.12})
+      .from(".dots", {scale:.7, opacity:0, duration:1.2}, .1)
+      .from(".art svg", {rotation:-20, scale:.9, opacity:0, duration:1.4, transformOrigin:"50% 50%"}, .2)
+      .from(".welcome, .hero .lede, .hero .cta", {opacity:0, y:20, duration:.8, stagger:.12}, .5);
+
+    gsap.from(".ticket", {scrollTrigger:{trigger:".tickets", start:"top 78%"}, opacity:0, y:60, stagger:.14, duration:.9});
+    gsap.from(".enf-item", {scrollTrigger:{trigger:".enf-grid", start:"top 75%"}, opacity:0, y:40, stagger:.15, duration:.9});
+    gsap.from(".close .rings", {scrollTrigger:{trigger:".close", start:"top 70%"}, rotation:-30, scale:.9, opacity:0, duration:1.2, transformOrigin:"50% 50%"});
+  }
+</script>
+</body>
+</html>
